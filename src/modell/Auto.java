@@ -5,27 +5,34 @@ public class Auto extends Jarmu{
     public Auto(boolean defekt) {
         this.defekt = defekt;
     }
-    public void kereketCserel(){
     
+    public void kereketCserel(){
+        this.defekt = false;
     }
     @Override
     public boolean halad(){
+        if((int)((Math.random()*4)+1)==4){
+            this.defekt = true;
+            kereketCserel();
+        }
+
         return true;
     }
 
     @Override
     public boolean tankol() {
-        return super.tankol(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        
     }
 
     @Override
     public void leallit() {
-        super.leallit(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        
     }
 
     @Override
     public void beindit() {
-        super.beindit(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        beindit(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
+    
     
 }
