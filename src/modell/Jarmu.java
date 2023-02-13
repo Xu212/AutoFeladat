@@ -32,5 +32,9 @@ public abstract class Jarmu {
     public void setUzemanyag() {
         this.uzemanyag = tankol();
     }
+
+    public boolean isUzemanyag() {
+        return uzemanyag;
+    }
     
 }
